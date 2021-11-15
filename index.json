@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "~/": "./src/",
+    "html": "./lib/html/index.js",
+    "x-elements": "./lib/elements/index.js",
+    "x-elements/": "./lib/elements/"
+  }
+}

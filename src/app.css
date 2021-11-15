@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  padding: 1rem;
+}
+
+.counter {
+  font-size: var(--x-font-huge);
+}
+
+.counter {
+  width: 4rem;
+  display: inline-block;
+  text-align: center;
+}

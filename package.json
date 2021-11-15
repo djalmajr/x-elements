@@ -1,0 +1,12 @@
+{
+  "name": "x-elements",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "scripts": {
+    "start": "yarn serve --dev",
+    "serve": "npx -p sirv-cli sirv .",
+    "build": "echo This is a static template, there is no bundler or bundling involved!"
+  }
+}
