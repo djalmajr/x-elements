@@ -8,15 +8,6 @@
   --spacing-huge: var(--x-spacing-huge, 2.5rem);
   --spacing-jumbo: var(--x-spacing-jumbo, 3rem);
   --spacing-giant: var(--x-spacing-giant, 4rem);
-  --layout-tiny: var(--x-layout-tiny, 0.5rem);
-  --layout-mini: var(--x-layout-mini, 0.75rem);
-  --layout-small: var(--x-layout-small, 1rem);
-  --layout-medium: var(--x-layout-medium, 1.5rem);
-  --layout-large: var(--x-layout-large, 2rem);
-  --layout-big: var(--x-layout-big, 3rem);
-  --layout-huge: var(--x-layout-huge, 4rem);
-  --layout-jumbo: var(--x-layout-jumbo, 6rem);
-  --layout-giant: var(--x-layout-giant, 10rem);
 }
 
 :host {
@@ -24,6 +15,8 @@
 }
 
 /*** Direction ***/
+
+:host,
 :host([direction="horizontal"]) {
   flex-direction: row;
 }
@@ -41,6 +34,8 @@
 }
 
 /*** Alignment ***/
+
+:host,
 :host([direction*="horizontal"][align="start"]) {
   align-items: flex-start;
 }
@@ -65,440 +60,216 @@
   align-items: flex-end;
 }
 
-/*** Spacing ***/
-:host([direction*="horizontal"]) ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-left: calc(var(--spacing-medium) * calc(1 - 0)) !important;
-  margin-right: calc(var(--spacing-medium) * 0) !important;
-}
+/*** Size ***/
 
-:host([direction="horizontal"][size="tiny"][variant="spacing"])
+:host([direction="horizontal"][size="tiny"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-left: calc(var(--spacing-tiny) * calc(1 - 0)) !important;
   margin-right: calc(var(--spacing-tiny) * 0) !important;
 }
 
-:host([direction="horizontal"][size="tiny"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-left: calc(var(--layout-tiny) * calc(1 - 0)) !important;
-  margin-right: calc(var(--layout-tiny) * 0) !important;
-}
-
-:host([direction="horizontal"][size="mini"][variant="spacing"])
+:host([direction="horizontal"][size="mini"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-left: calc(var(--spacing-mini) * calc(1 - 0)) !important;
   margin-right: calc(var(--spacing-mini) * 0) !important;
 }
 
-:host([direction="horizontal"][size="mini"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-left: calc(var(--layout-mini) * calc(1 - 0)) !important;
-  margin-right: calc(var(--layout-mini) * 0) !important;
-}
-
-:host([direction="horizontal"][size="small"][variant="spacing"])
+:host([direction="horizontal"][size="small"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-left: calc(var(--spacing-small) * calc(1 - 0)) !important;
   margin-right: calc(var(--spacing-small) * 0) !important;
 }
 
-:host([direction="horizontal"][size="small"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-left: calc(var(--layout-small) * calc(1 - 0)) !important;
-  margin-right: calc(var(--layout-small) * 0) !important;
-}
-
-:host([direction="horizontal"][size="medium"][variant="spacing"])
+:host ::slotted(*:not([hidden]):not(:first-child)),
+:host([direction*="horizontal"]) ::slotted(*:not([hidden]):not(:first-child)),
+:host([direction="horizontal"][size="medium"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-left: calc(var(--spacing-medium) * calc(1 - 0)) !important;
   margin-right: calc(var(--spacing-medium) * 0) !important;
 }
 
-:host([direction="horizontal"][size="medium"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-left: calc(var(--layout-medium) * calc(1 - 0)) !important;
-  margin-right: calc(var(--layout-medium) * 0) !important;
-}
-
-:host([direction="horizontal"][size="large"][variant="spacing"])
+:host([direction="horizontal"][size="large"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-left: calc(var(--spacing-large) * calc(1 - 0)) !important;
   margin-right: calc(var(--spacing-large) * 0) !important;
 }
 
-:host([direction="horizontal"][size="large"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-left: calc(var(--layout-large) * calc(1 - 0)) !important;
-  margin-right: calc(var(--layout-large) * 0) !important;
-}
-
-:host([direction="horizontal"][size="big"][variant="spacing"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
+:host([direction="horizontal"][size="big"]) ::slotted(*:not([hidden]):not(:first-child)) {
   margin-left: calc(var(--spacing-big) * calc(1 - 0)) !important;
   margin-right: calc(var(--spacing-big) * 0) !important;
 }
 
-:host([direction="horizontal"][size="big"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-left: calc(var(--layout-big) * calc(1 - 0)) !important;
-  margin-right: calc(var(--layout-big) * 0) !important;
-}
-
-:host([direction="horizontal"][size="huge"][variant="spacing"])
+:host([direction="horizontal"][size="huge"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-left: calc(var(--spacing-huge) * calc(1 - 0)) !important;
   margin-right: calc(var(--spacing-huge) * 0) !important;
 }
 
-:host([direction="horizontal"][size="huge"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-left: calc(var(--layout-huge) * calc(1 - 0)) !important;
-  margin-right: calc(var(--layout-huge) * 0) !important;
-}
-
-:host([direction="horizontal"][size="jumbo"][variant="spacing"])
+:host([direction="horizontal"][size="jumbo"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-left: calc(var(--spacing-jumbo) * calc(1 - 0)) !important;
   margin-right: calc(var(--spacing-jumbo) * 0) !important;
 }
 
-:host([direction="horizontal"][size="jumbo"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-left: calc(var(--layout-jumbo) * calc(1 - 0)) !important;
-  margin-right: calc(var(--layout-jumbo) * 0) !important;
-}
-
-:host([direction="horizontal"][size="giant"][variant="spacing"])
+:host([direction="horizontal"][size="giant"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-left: calc(var(--spacing-giant) * calc(1 - 0)) !important;
   margin-right: calc(var(--spacing-giant) * 0) !important;
 }
 
-:host([direction="horizontal"][size="giant"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-left: calc(var(--layout-giant) * calc(1 - 0)) !important;
-  margin-right: calc(var(--layout-giant) * 0) !important;
-}
-
-:host([direction="horizontal-reverse"][size="tiny"][variant="spacing"])
+:host([direction="horizontal-reverse"][size="tiny"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-left: calc(var(--spacing-tiny) * calc(1 - 1)) !important;
   margin-right: calc(var(--spacing-tiny) * 1) !important;
 }
 
-:host([direction="horizontal-reverse"][size="tiny"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-left: calc(var(--layout-tiny) * calc(1 - 1)) !important;
-  margin-right: calc(var(--layout-tiny) * 1) !important;
-}
-
-:host([direction="horizontal-reverse"][size="mini"][variant="spacing"])
+:host([direction="horizontal-reverse"][size="mini"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-left: calc(var(--spacing-mini) * calc(1 - 1)) !important;
   margin-right: calc(var(--spacing-mini) * 1) !important;
 }
 
-:host([direction="horizontal-reverse"][size="mini"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-left: calc(var(--layout-mini) * calc(1 - 1)) !important;
-  margin-right: calc(var(--layout-mini) * 1) !important;
-}
-
-:host([direction="horizontal-reverse"][size="small"][variant="spacing"])
+:host([direction="horizontal-reverse"][size="small"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-left: calc(var(--spacing-small) * calc(1 - 1)) !important;
   margin-right: calc(var(--spacing-small) * 1) !important;
 }
 
-:host([direction="horizontal-reverse"][size="small"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-left: calc(var(--layout-small) * calc(1 - 1)) !important;
-  margin-right: calc(var(--layout-small) * 1) !important;
-}
-
-:host([direction="horizontal-reverse"][size="medium"][variant="spacing"])
+:host([direction="horizontal-reverse"]) ::slotted(*:not([hidden]):not(:first-child)),
+:host([direction="horizontal-reverse"][size="medium"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-left: calc(var(--spacing-medium) * calc(1 - 1)) !important;
   margin-right: calc(var(--spacing-medium) * 1) !important;
 }
 
-:host([direction="horizontal-reverse"][size="medium"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-left: calc(var(--layout-medium) * calc(1 - 1)) !important;
-  margin-right: calc(var(--layout-medium) * 1) !important;
-}
-
-:host([direction="horizontal-reverse"][size="large"][variant="spacing"])
+:host([direction="horizontal-reverse"][size="large"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-left: calc(var(--spacing-large) * calc(1 - 1)) !important;
   margin-right: calc(var(--spacing-large) * 1) !important;
 }
 
-:host([direction="horizontal-reverse"][size="large"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-left: calc(var(--layout-large) * calc(1 - 1)) !important;
-  margin-right: calc(var(--layout-large) * 1) !important;
-}
-
-:host([direction="horizontal-reverse"][size="big"][variant="spacing"])
+:host([direction="horizontal-reverse"][size="big"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-left: calc(var(--spacing-big) * calc(1 - 1)) !important;
   margin-right: calc(var(--spacing-big) * 1) !important;
 }
 
-:host([direction="horizontal-reverse"][size="big"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-left: calc(var(--layout-big) * calc(1 - 1)) !important;
-  margin-right: calc(var(--layout-big) * 1) !important;
-}
-
-:host([direction="horizontal-reverse"][size="huge"][variant="spacing"])
+:host([direction="horizontal-reverse"][size="huge"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-left: calc(var(--spacing-huge) * calc(1 - 1)) !important;
   margin-right: calc(var(--spacing-huge) * 1) !important;
 }
 
-:host([direction="horizontal-reverse"][size="huge"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-left: calc(var(--layout-huge) * calc(1 - 1)) !important;
-  margin-right: calc(var(--layout-huge) * 1) !important;
-}
-
-:host([direction="horizontal-reverse"][size="jumbo"][variant="spacing"])
+:host([direction="horizontal-reverse"][size="jumbo"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-left: calc(var(--spacing-jumbo) * calc(1 - 1)) !important;
   margin-right: calc(var(--spacing-jumbo) * 1) !important;
 }
 
-:host([direction="horizontal-reverse"][size="jumbo"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-left: calc(var(--layout-jumbo) * calc(1 - 1)) !important;
-  margin-right: calc(var(--layout-jumbo) * 1) !important;
-}
-
-:host([direction="horizontal-reverse"][size="giant"][variant="spacing"])
+:host([direction="horizontal-reverse"][size="giant"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-left: calc(var(--spacing-giant) * calc(1 - 1)) !important;
   margin-right: calc(var(--spacing-giant) * 1) !important;
 }
 
-:host([direction="horizontal-reverse"][size="giant"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-left: calc(var(--layout-giant) * calc(1 - 1)) !important;
-  margin-right: calc(var(--layout-giant) * 1) !important;
-}
-
-:host([direction="vertical"][size="tiny"][variant="spacing"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
+:host([direction="vertical"][size="tiny"]) ::slotted(*:not([hidden]):not(:first-child)) {
   margin-top: calc(var(--spacing-tiny) * calc(1 - 0)) !important;
   margin-bottom: calc(var(--spacing-tiny) * 0) !important;
 }
 
-:host([direction="vertical"][size="tiny"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-top: calc(var(--layout-tiny) * calc(1 - 0)) !important;
-  margin-bottom: calc(var(--layout-tiny) * 0) !important;
-}
-
-:host([direction="vertical"][size="mini"][variant="spacing"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
+:host([direction="vertical"][size="mini"]) ::slotted(*:not([hidden]):not(:first-child)) {
   margin-top: calc(var(--spacing-mini) * calc(1 - 0)) !important;
   margin-bottom: calc(var(--spacing-mini) * 0) !important;
 }
 
-:host([direction="vertical"][size="mini"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-top: calc(var(--layout-mini) * calc(1 - 0)) !important;
-  margin-bottom: calc(var(--layout-mini) * 0) !important;
-}
-
-:host([direction="vertical"][size="small"][variant="spacing"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
+:host([direction="vertical"][size="small"]) ::slotted(*:not([hidden]):not(:first-child)) {
   margin-top: calc(var(--spacing-small) * calc(1 - 0)) !important;
   margin-bottom: calc(var(--spacing-small) * 0) !important;
 }
 
-:host([direction="vertical"][size="small"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-top: calc(var(--layout-small) * calc(1 - 0)) !important;
-  margin-bottom: calc(var(--layout-small) * 0) !important;
-}
-
-:host([direction="vertical"][size="medium"][variant="spacing"])
+:host([direction="vertical"]) ::slotted(*:not([hidden]):not(:first-child)),
+:host([direction="vertical"][size="medium"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-top: calc(var(--spacing-medium) * calc(1 - 0)) !important;
   margin-bottom: calc(var(--spacing-medium) * 0) !important;
 }
 
-:host([direction="vertical"][size="medium"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-top: calc(var(--layout-medium) * calc(1 - 0)) !important;
-  margin-bottom: calc(var(--layout-medium) * 0) !important;
-}
-
-:host([direction="vertical"][size="large"][variant="spacing"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
+:host([direction="vertical"][size="large"]) ::slotted(*:not([hidden]):not(:first-child)) {
   margin-top: calc(var(--spacing-large) * calc(1 - 0)) !important;
   margin-bottom: calc(var(--spacing-large) * 0) !important;
 }
 
-:host([direction="vertical"][size="large"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-top: calc(var(--layout-large) * calc(1 - 0)) !important;
-  margin-bottom: calc(var(--layout-large) * 0) !important;
-}
-
-:host([direction="vertical"][size="big"][variant="spacing"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
+:host([direction="vertical"][size="big"]) ::slotted(*:not([hidden]):not(:first-child)) {
   margin-top: calc(var(--spacing-big) * calc(1 - 0)) !important;
   margin-bottom: calc(var(--spacing-big) * 0) !important;
 }
 
-:host([direction="vertical"][size="big"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-top: calc(var(--layout-big) * calc(1 - 0)) !important;
-  margin-bottom: calc(var(--layout-big) * 0) !important;
-}
-
-:host([direction="vertical"][size="huge"][variant="spacing"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
+:host([direction="vertical"][size="huge"]) ::slotted(*:not([hidden]):not(:first-child)) {
   margin-top: calc(var(--spacing-huge) * calc(1 - 0)) !important;
   margin-bottom: calc(var(--spacing-huge) * 0) !important;
 }
 
-:host([direction="vertical"][size="huge"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-top: calc(var(--layout-huge) * calc(1 - 0)) !important;
-  margin-bottom: calc(var(--layout-huge) * 0) !important;
-}
-
-:host([direction="vertical"][size="jumbo"][variant="spacing"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
+:host([direction="vertical"][size="jumbo"]) ::slotted(*:not([hidden]):not(:first-child)) {
   margin-top: calc(var(--spacing-jumbo) * calc(1 - 0)) !important;
   margin-bottom: calc(var(--spacing-jumbo) * 0) !important;
 }
 
-:host([direction="vertical"][size="jumbo"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-top: calc(var(--layout-jumbo) * calc(1 - 0)) !important;
-  margin-bottom: calc(var(--layout-jumbo) * 0) !important;
-}
-
-:host([direction="vertical"][size="giant"][variant="spacing"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
+:host([direction="vertical"][size="giant"]) ::slotted(*:not([hidden]):not(:first-child)) {
   margin-top: calc(var(--spacing-giant) * calc(1 - 0)) !important;
   margin-bottom: calc(var(--spacing-giant) * 0) !important;
 }
 
-:host([direction="vertical"][size="giant"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-top: calc(var(--layout-giant) * calc(1 - 0)) !important;
-  margin-bottom: calc(var(--layout-giant) * 0) !important;
-}
-
-:host([direction="vertical-reverse"][size="tiny"][variant="spacing"])
+:host([direction="vertical-reverse"][size="tiny"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-top: calc(var(--spacing-tiny) * calc(1 - 1)) !important;
   margin-bottom: calc(var(--spacing-tiny) * 1) !important;
 }
 
-:host([direction="vertical-reverse"][size="tiny"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-top: calc(var(--layout-tiny) * calc(1 - 1)) !important;
-  margin-bottom: calc(var(--layout-tiny) * 1) !important;
-}
-
-:host([direction="vertical-reverse"][size="mini"][variant="spacing"])
+:host([direction="vertical-reverse"][size="mini"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-top: calc(var(--spacing-mini) * calc(1 - 1)) !important;
   margin-bottom: calc(var(--spacing-mini) * 1) !important;
 }
 
-:host([direction="vertical-reverse"][size="mini"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-top: calc(var(--layout-mini) * calc(1 - 1)) !important;
-  margin-bottom: calc(var(--layout-mini) * 1) !important;
-}
-
-:host([direction="vertical-reverse"][size="small"][variant="spacing"])
+:host([direction="vertical-reverse"][size="small"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-top: calc(var(--spacing-small) * calc(1 - 1)) !important;
   margin-bottom: calc(var(--spacing-small) * 1) !important;
 }
 
-:host([direction="vertical-reverse"][size="small"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-top: calc(var(--layout-small) * calc(1 - 1)) !important;
-  margin-bottom: calc(var(--layout-small) * 1) !important;
-}
-
-:host([direction="vertical-reverse"][size="medium"][variant="spacing"])
+:host([direction="vertical-reverse"]) ::slotted(*:not([hidden]):not(:first-child)),
+:host([direction="vertical-reverse"][size="medium"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-top: calc(var(--spacing-medium) * calc(1 - 1)) !important;
   margin-bottom: calc(var(--spacing-medium) * 1) !important;
 }
 
-:host([direction="vertical-reverse"][size="medium"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-top: calc(var(--layout-medium) * calc(1 - 1)) !important;
-  margin-bottom: calc(var(--layout-medium) * 1) !important;
-}
-
-:host([direction="vertical-reverse"][size="large"][variant="spacing"])
+:host([direction="vertical-reverse"][size="large"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-top: calc(var(--spacing-large) * calc(1 - 1)) !important;
   margin-bottom: calc(var(--spacing-large) * 1) !important;
 }
 
-:host([direction="vertical-reverse"][size="large"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-top: calc(var(--layout-large) * calc(1 - 1)) !important;
-  margin-bottom: calc(var(--layout-large) * 1) !important;
-}
-
-:host([direction="vertical-reverse"][size="big"][variant="spacing"])
+:host([direction="vertical-reverse"][size="big"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-top: calc(var(--spacing-big) * calc(1 - 1)) !important;
   margin-bottom: calc(var(--spacing-big) * 1) !important;
 }
 
-:host([direction="vertical-reverse"][size="big"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-top: calc(var(--layout-big) * calc(1 - 1)) !important;
-  margin-bottom: calc(var(--layout-big) * 1) !important;
-}
-
-:host([direction="vertical-reverse"][size="huge"][variant="spacing"])
+:host([direction="vertical-reverse"][size="huge"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-top: calc(var(--spacing-huge) * calc(1 - 1)) !important;
   margin-bottom: calc(var(--spacing-huge) * 1) !important;
 }
 
-:host([direction="vertical-reverse"][size="huge"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-top: calc(var(--layout-huge) * calc(1 - 1)) !important;
-  margin-bottom: calc(var(--layout-huge) * 1) !important;
-}
-
-:host([direction="vertical-reverse"][size="jumbo"][variant="spacing"])
+:host([direction="vertical-reverse"][size="jumbo"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-top: calc(var(--spacing-jumbo) * calc(1 - 1)) !important;
   margin-bottom: calc(var(--spacing-jumbo) * 1) !important;
 }
 
-:host([direction="vertical-reverse"][size="jumbo"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-top: calc(var(--layout-jumbo) * calc(1 - 1)) !important;
-  margin-bottom: calc(var(--layout-jumbo) * 1) !important;
-}
-
-:host([direction="vertical-reverse"][size="giant"][variant="spacing"])
+:host([direction="vertical-reverse"][size="giant"])
   ::slotted(*:not([hidden]):not(:first-child)) {
   margin-top: calc(var(--spacing-giant) * calc(1 - 1)) !important;
   margin-bottom: calc(var(--spacing-giant) * 1) !important;
-}
-
-:host([direction="vertical-reverse"][size="giant"][variant="layout"])
-  ::slotted(*:not([hidden]):not(:first-child)) {
-  margin-top: calc(var(--layout-giant) * calc(1 - 1)) !important;
-  margin-bottom: calc(var(--layout-giant) * 1) !important;
 }

@@ -10,18 +10,15 @@ export class App extends BaseElement {
   };
 
   handleChange = (evt) => {
-    this.state.name = evt.target.value;
-    this._render();
+    this.setState({ name: evt.target.value });
   };
 
   handleDecrease = () => {
-    this.state.count -= 1;
-    this._render();
+    this.setState((s) => ({ count: s.count - 1 }));
   };
 
   handleIncrease = () => {
-    this.state.count += 1;
-    this._render();
+    this.setState((s) => ({ count: s.count + 1 }));
   };
 
   render() {
