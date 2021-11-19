@@ -1,155 +1,155 @@
 :root {
   /********************************************************
-   * COLORS
+   * CORE COLORS
    ********************************************************/
 
-  --x-color-primary: #0f7bc2;
-  --x-color-primary-alt: #0a588b;
-  --x-color-primary-light: #45a3e6;
-  --x-color-primary-lighter: #8ac7fc;
-  --x-color-primary-lighteralt: #cfe9ff;
-  --x-color-primary-dark: #063f65;
-  --x-color-primary-darker: #05304d;
-  --x-color-primary-darkalt: #084b77;
+  --primary-hs: 241, 63%;
+  --primary-l: 59%;
+  --primary-dark-l: calc(var(--primary-l) - 3%);
+  --primary-light-l: calc(var(--primary-l) + 3%);
 
-  --x-color-info: #0f7bc2;
-  --x-color-danger: #eb0000;
-  --x-color-danger-dark: #b30000;
-  --x-color-success: #008a00;
-  --x-color-warning: #c88800;
+  --primary-color: hsl(var(--primary-hs), var(--primary-l));
+  --primary-color-dark: hsl(var(--primary-hs), var(--primary-dark-l));
+  --primary-color-light: hsl(var(--primary-hs), var(--primary-light-l));
 
-  --x-color-gray: #919191;
-  --x-color-gray-alt: #5e5e5e;
-  --x-color-gray-light: #acacac;
-  --x-color-gray-lighter: #c4c4c4;
-  --x-color-gray-lighteralt: #dedede;
-  --x-color-gray-dark: #2b2b2b;
-  --x-color-gray-darker: #141414;
-  --x-color-gray-darkalt: #3b3b3b;
+  --secondary-hs: --primary-hs;
+  --secondary-l: calc(var(--primary-l) + 37.5%);
+  --secondary-dark-l: calc(var(--secondary-l) - 3%);
+  --secondary-light-l: calc(var(--secondary-l) + 3%);
 
-  --x-color-text: var(--x-color-gray-dark);
-  --x-color-text-dark: var(--x-color-gray-darker);
-  --x-color-text-disabled: var(--x-color-gray);
-
-  --x-color-overlay: rgba(0, 0, 0, 0.75);
+  --secondary-color: hsl(var(--secondary-hs), var(--secondary-l));
+  --secondary-color-dark: hsl(var(--secondary-hs), var(--secondary-dark-l));
+  --secondary-color-light: hsl(var(--secondary-hs), var(--secondary-light-l));
 
   /********************************************************
-   * LAYOUT
+   * GRAY COLORS
    ********************************************************/
 
-  --x-spacing-tiny: 0.25rem;
-  --x-spacing-mini: 0.5rem;
-  --x-spacing-small: 0.75rem;
-  --x-spacing-medium: 1rem;
-  --x-spacing-large: 1.5rem;
-  --x-spacing-big: 2rem;
-  --x-spacing-huge: 2.5rem;
-  --x-spacing-jumbo: 3rem;
-  --x-spacing-giant: 4rem;
+  --dark-hs: 217, 16%;
+  --dark-l: 22%;
+  --dark-color: hsl(var(--dark-hs), 22%);
+  --light-color: #fff;
+
+  --gray-color: hsl(var(--dark-hs), calc(var(--dark-l) + 55%));
+  --gray-color-dark: hsl(var(--dark-hs), calc(var(--dark-l) - 7%));
+  --gray-color-light: hsl(var(--dark-hs), calc(var(--dark-l) + 20%));
+
+  --border-color: hsl(var(--dark-hs), calc(var(--dark-l) + 65%));
+  --border-color-dark: hsl(var(--dark-hs), calc(var(--dark-l) + 55%));
+  --border-color-light: hsl(var(--dark-hs), calc(var(--dark-l) + 73%));
+
+  --bg-color: hsl(var(--dark-hs), calc(var(--dark-l) + 75%));
+  --bg-color-dark: hsl(var(--dark-hs), calc(var(--dark-l) + 72%));
+  --bg-color-light: var(--light-color);
 
   /********************************************************
-   * FONT
+   * CONTROL COLORS
    ********************************************************/
 
-  --x-font-tiny: 0.675rem;
-  --x-font-mini: 0.75rem;
-  --x-font-small: 0.875rem;
-  --x-font-medium: 1rem;
-  --x-font-large: 1.25rem;
-  --x-font-big: 1.5rem;
-  --x-font-huge: 2rem;
-  --x-font-jumbo: 2.5rem;
-  --x-font-giant: 3rem;
-  --x-font-family: "Open Sans", sans-serif;
-
-  --x-line-tiny: 0.75rem;
-  --x-line-mini: 1rem;
-  --x-line-small: 1.25rem;
-  --x-line-medium: 1.5rem;
-  --x-line-large: 1.75rem;
-  --x-line-big: 2rem;
-  --x-line-huge: 2.25rem;
-  --x-line-jumbo: 2.5rem;
-  --x-line-giant: 3rem;
+  --success-color: hsl(128, 57%, 45%);
+  --warning-color: hsl(43, 100%, 50%);
+  --error-color: hsl(22, 100%, 45%);
 
   /********************************************************
-   * GENERAL
+   * OTHER COLORS
    ********************************************************/
 
-  --x-animation-duration: 350ms;
-
-  --x-radius-small: 0.2rem;
-  --x-radius-medium: 0.4rem;
-
-  --x-zindex-0: 1;
-  --x-zindex-1: 100;
-  --x-zindex-2: 200;
-  --x-zindex-3: 300;
-  --x-zindex-4: 400;
+  --code-color: hsl(356, 66%, 54%);
+  --highlight-color: hsl(43, 100%, 85%);
+  --body-bg: var(--bg-color-light);
+  --body-font-color: hsl(217, 16%, 27%);
+  --link-color: var(--primary-color);
+  --link-color-dark: hsl(var(--primary-hs), calc(var(--primary-l) - 10%));
+  --link-color-light: hsl(var(--primary-hs), calc(var(--primary-l) + 10%));
 
   /********************************************************
-   * ALERT
+   *
+   * FONTS
+   *
+   * Credit: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
+   *
    ********************************************************/
 
-  --x-alert-box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
-  --x-alert-padding: var(--x-spacing-small);
+  --base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+  --mono-font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;
+  --fallback-font-family: "Helvetica Neue", sans-serif;
+  --body-font-family: var(--base-font-family), var(--fallback-font-family);
 
   /********************************************************
-   * AVATAR
+   * UNIT SIZES
    ********************************************************/
 
-  --x-avatar-border-width: 0.1rem;
-  --x-avatar-size-mini: 1rem;
-  --x-avatar-size-small: 1.2rem;
-  --x-avatar-size-medium: 1.6rem;
-  --x-avatar-size-large: 2.4rem;
-  --x-avatar-size-big: 3.2rem;
+  --unit-o: 0.05rem;
+  --unit-h: 0.1rem;
+  --unit-1: 0.2rem;
+  --unit-2: 0.4rem;
+  --unit-3: 0.6rem;
+  --unit-4: 0.8rem;
+  --unit-5: 1rem;
+  --unit-6: 1.2rem;
+  --unit-7: 1.4rem;
+  --unit-8: 1.6rem;
+  --unit-9: 1.8rem;
+  --unit-10: 2rem;
+  --unit-12: 2.4rem;
+  --unit-16: 3.2rem;
 
   /********************************************************
-   * DIALOG
+   * FONT SIZES
    ********************************************************/
 
-  --x-dialog-box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
-  --x-dialog-padding: var(--x-spacing-small);
+  --html-font-size: 20px;
+  --html-line-height: 1.5;
+  --font-size: 0.8rem;
+  --font-size-sm: 0.7rem;
+  --font-size-lg: 0.9rem;
+  --line-height: 1.2rem;
 
   /********************************************************
-   * ICON
+   * SIZES
    ********************************************************/
 
-  --x-icon-size-small: 0.75rem;
-  --x-icon-size-medium: 1rem;
-  --x-icon-size-large: 1.5rem;
-  --x-icon-size-big: 2.25rem;
-  --x-icon-size-huge: 3.5rem;
-  --x-icon-size-jumbo: 4.75rem;
-  --x-icon-size-giant: 6rem;
+  --layout-spacing: var(--unit-2);
+  --layout-spacing-sm: var(--unit-1);
+  --layout-spacing-lg: var(--unit-4);
+  --border-radius: var(--unit-h);
+  --border-width: var(--unit-o);
+  --border-width-lg: var(--unit-h);
+  --size: var(--unit-9);
+  --size-sm: var(--unit-7);
+  --size-lg: var(--unit-10);
+  --padding-x: var(--unit-2);
+  --padding-x-sm: calc(var(--unit-2) * 0.75);
+  --padding-x-lg: calc(var(--unit-2) * 1.5);
+  --padding-y: calc((var(--size) - var(--line-height)) / 2 - var(--border-width));
+  --padding-y-sm: calc((var(--size-sm) - var(--line-height)) / 2 - var(--border-width));
+  --padding-y-lg: calc((var(--size-lg) - var(--line-height)) / 2 - var(--border-width));
+  --icon-size: 0.8rem;
+  --width-xs: 180px;
+  --width-sm: 320px;
+  --width-md: 640px;
+  --width-lg: 960px;
+  --width-xl: 1280px;
 
   /********************************************************
-   * POPOVER
+   * BREAKPOINTS
    ********************************************************/
 
-  --x-popover-arrow-size: var(--x-spacing-mini);
-  --x-popover-background: white;
-  --x-popover-border-color: var(--x-color-gray-light);
-  --x-popover-border-size: 1px;
-  --x-popover-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
-  --x-popover-padding: var(--x-spacing-mini);
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 840px;
+  --breakpoint-lg: 960px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2x: 1440px;
+  --breakpoint-responsive: var(--breakpoint-xs);
 
   /********************************************************
-   * TABS
+   * Z-INDEX
    ********************************************************/
 
-  --x-tabs-color: 0;
-  --x-tabs-tab-padding: 0 var(--x-spacing-mini);
-  --x-tabs-tab-background: #fff;
-  --x-tabs-tab-background-selected: #f7f7f7;
-
-  /********************************************************
-   * TOOLTIP
-   ********************************************************/
-
-  --x-tooltip-arrow-size: var(--x-radius-medium);
-  --x-tooltip-background: var(--x-color-gray-dark);
-  --x-tooltip-max-width: 320px;
-  --x-tooltip-padding: 0.3rem 0.6rem;
+  --zindex-0: 1;
+  --zindex-1: 100;
+  --zindex-2: 200;
+  --zindex-3: 300;
+  --zindex-4: 400;
 }

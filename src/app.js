@@ -23,19 +23,13 @@ export class App extends BaseElement {
 
   render() {
     return html`
-      <x-space direction="vertical">
-        <x-space align="center" size="mini">
-          <x-button @click=${this.handleDecrease}>-</x-button>
-          <span class="counter">${this.state.count}</span>
-          <x-button @click=${this.handleIncrease}>+</x-button>
-        </x-space>
-        <form @submit=${(e) => e.preventDefault()}>
-          <x-space align="center">
-            <input name="name" @input=${this.handleChange} />
-            <span>Hello ${this.state.name || "Djalma Júnior"}!</span>
-          </x-space>
-        </form>
-      </x-space>
+      <x-button @click=${this.handleDecrease}>-</x-button>
+      <span class="counter">${this.state.count}</span>
+      <x-button @click=${this.handleIncrease}>+</x-button>
+      <form @submit=${(e) => e.preventDefault()}>
+        <input name="name" @input=${this.handleChange} />
+        <span>Hello ${this.state.name || "Djalma Júnior"}!</span>
+      </form>
     `;
   }
 }
