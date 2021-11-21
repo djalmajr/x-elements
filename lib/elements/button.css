@@ -1,10 +1,10 @@
 x-button {
   appearance: none;
   background: var(--bg-color-light);
-  border: var(--border-width) solid var(--primary-color);
+  border: var(--border-width) solid var(--primary-color-5);
   border-radius: var(--border-radius);
   box-sizing: border-box;
-  color: var(--primary-color);
+  color: var(--primary-color-5);
   cursor: pointer;
   display: inline-block;
   font-size: var(--font-size);
@@ -20,60 +20,61 @@ x-button {
   white-space: nowrap;
 }
 
-/* x-button:focus {
-  @include control-shadow();
-} */
+x-button[active],
+x-button:active,
+x-button:focus {
+  box-shadow: var(--shadow-1);
+}
 
 x-button:focus,
 x-button:hover {
-  background: var(--secondary-color);
-  border-color: var(--primary-color-dark);
+  background: var(--secondary-color-9);
+  border-color: var(--primary-color-5);
   text-decoration: none;
 }
 
 x-button:active,
-x-button.active {
-  background: var(--primary-color-dark);
-  border-color: hsl(var(--primary-dark-hs), calc(var(--primary-dark-l) - 5%));
+x-button[active] {
+  background: var(--primary-color-5);
+  border-color: var(--primary-color-4);
   color: var(--light-color);
   text-decoration: none;
 }
 
-x-button:active.loading::after,
-x-button.active.loading::after {
+x-button[loading]:active::after,
+x-button[loading][active]::after {
   border-bottom-color: var(--light-color);
   border-left-color: var(--light-color);
 }
 
 x-button[disabled],
-x-button:disabled,
-x-button.disabled {
+x-button:disabled {
   cursor: default;
   opacity: 0.5;
   pointer-events: none;
 }
 
-x-button.btn-primary {
-  background: var(--primary-color);
-  border-color: var(--primary-color-dark);
+x-button[intent="primary"] {
+  background: var(--primary-color-5);
+  border-color: var(--primary-color-6);
   color: var(--light-color);
 }
 
-x-button.btn-primary:focus,
-x-button.btn-primary:hover {
-  background: hsl(var(--primary-dark-hs), calc(var(--primary-dark-l) - 2%));
-  border-color: hsl(var(--primary-dark-hs), calc(var(--primary-dark-l) - 5%));
-  color: $light-color;
-}
-
-x-button.btn-primary:active,
-x-button.btn-primary.active {
-  background: hsl(var(--primary-dark-hs), calc(var(--primary-dark-l) - 4%));
-  border-color: hsl(var(--primary-dark-hs), calc(var(--primary-dark-l) - 7%));
+x-button[intent="primary"]:focus,
+x-button[intent="primary"]:hover {
+  background: var(--primary-color-3);
+  border-color: var(--primary-color-2);
   color: var(--light-color);
 }
 
-x-button.btn-primary.loading::after {
+x-button[intent="primary"]:active,
+x-button[intent="primary"][active] {
+  background: var(--primary-color-2);
+  border-color: var(--primary-color-1);
+  color: var(--light-color);
+}
+
+x-button[intent="primary"][loading]::after {
   border-bottom-color: var(--light-color);
   border-left-color: var(--light-color);
 }

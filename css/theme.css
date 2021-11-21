@@ -4,42 +4,80 @@
    ********************************************************/
 
   --primary-hs: 241, 63%;
-  --primary-l: 59%;
-  --primary-dark-l: calc(var(--primary-l) - 3%);
-  --primary-light-l: calc(var(--primary-l) + 3%);
+  --primary-l5: 59%;
+  --primary-l1: calc(var(--primary-l5) - 35%);
+  --primary-l2: calc(var(--primary-l5) - 25%);
+  --primary-l3: calc(var(--primary-l5) - 15%);
+  --primary-l4: calc(var(--primary-l5) - 5%);
+  --primary-l6: calc(var(--primary-l5) + 10%);
+  --primary-l7: calc(var(--primary-l5) + 15%);
+  --primary-l8: calc(var(--primary-l5) + 25%);
+  --primary-l9: calc(var(--primary-l5) + 35%);
 
-  --primary-color: hsl(var(--primary-hs), var(--primary-l));
-  --primary-color-dark: hsl(var(--primary-hs), var(--primary-dark-l));
-  --primary-color-light: hsl(var(--primary-hs), var(--primary-light-l));
+  --primary-color-1: hsl(var(--primary-hs), var(--primary-l1));
+  --primary-color-2: hsl(var(--primary-hs), var(--primary-l2));
+  --primary-color-3: hsl(var(--primary-hs), var(--primary-l3));
+  --primary-color-4: hsl(var(--primary-hs), var(--primary-l4));
+  --primary-color-5: hsl(var(--primary-hs), var(--primary-l5));
+  --primary-color-6: hsl(var(--primary-hs), var(--primary-l6));
+  --primary-color-7: hsl(var(--primary-hs), var(--primary-l7));
+  --primary-color-8: hsl(var(--primary-hs), var(--primary-l8));
+  --primary-color-9: hsl(var(--primary-hs), var(--primary-l9));
 
-  --secondary-hs: --primary-hs;
-  --secondary-l: calc(var(--primary-l) + 37.5%);
-  --secondary-dark-l: calc(var(--secondary-l) - 3%);
-  --secondary-light-l: calc(var(--secondary-l) + 3%);
+  --secondary-hs: var(--primary-hs);
+  --secondary-l5: var(--primary-l8);
+  --secondary-l1: calc(var(--secondary-l5) - 20%);
+  --secondary-l2: calc(var(--secondary-l5) - 15%);
+  --secondary-l3: calc(var(--secondary-l5) - 10%);
+  --secondary-l4: calc(var(--secondary-l5) - 5%);
+  --secondary-l6: calc(var(--secondary-l5) + 4%);
+  --secondary-l7: calc(var(--secondary-l5) + 7%);
+  --secondary-l8: calc(var(--secondary-l5) + 11%);
+  --secondary-l9: calc(var(--secondary-l5) + 14%);
 
-  --secondary-color: hsl(var(--secondary-hs), var(--secondary-l));
-  --secondary-color-dark: hsl(var(--secondary-hs), var(--secondary-dark-l));
-  --secondary-color-light: hsl(var(--secondary-hs), var(--secondary-light-l));
+  --secondary-color-1: hsl(var(--secondary-hs), var(--secondary-l1));
+  --secondary-color-2: hsl(var(--secondary-hs), var(--secondary-l2));
+  --secondary-color-3: hsl(var(--secondary-hs), var(--secondary-l3));
+  --secondary-color-4: hsl(var(--secondary-hs), var(--secondary-l4));
+  --secondary-color-5: hsl(var(--secondary-hs), var(--secondary-l5));
+  --secondary-color-6: hsl(var(--secondary-hs), var(--secondary-l6));
+  --secondary-color-7: hsl(var(--secondary-hs), var(--secondary-l7));
+  --secondary-color-8: hsl(var(--secondary-hs), var(--secondary-l8));
+  --secondary-color-9: hsl(var(--secondary-hs), var(--secondary-l9));
 
   /********************************************************
    * GRAY COLORS
    ********************************************************/
 
-  --dark-hs: 217, 16%;
-  --dark-l: 22%;
-  --dark-color: hsl(var(--dark-hs), 22%);
   --light-color: #fff;
 
-  --gray-color: hsl(var(--dark-hs), calc(var(--dark-l) + 55%));
-  --gray-color-dark: hsl(var(--dark-hs), calc(var(--dark-l) - 7%));
-  --gray-color-light: hsl(var(--dark-hs), calc(var(--dark-l) + 20%));
+  --gray-hs: 0, 0%;
+  --gray-l5: 62%;
+  --gray-l1: calc(var(--gray-l5) - 30%);
+  --gray-l2: calc(var(--gray-l5) - 20%);
+  --gray-l3: calc(var(--gray-l5) - 15%);
+  --gray-l4: calc(var(--gray-l5) - 10%);
+  --gray-l6: calc(var(--gray-l5) + 20%);
+  --gray-l7: calc(var(--gray-l5) + 25%);
+  --gray-l8: calc(var(--gray-l5) + 30%);
+  --gray-l9: calc(var(--gray-l5) + 35%);
 
-  --border-color: hsl(var(--dark-hs), calc(var(--dark-l) + 65%));
-  --border-color-dark: hsl(var(--dark-hs), calc(var(--dark-l) + 55%));
-  --border-color-light: hsl(var(--dark-hs), calc(var(--dark-l) + 73%));
+  --gray-color-1: hsl(var(--gray-hs), var(--gray-l1));
+  --gray-color-2: hsl(var(--gray-hs), var(--gray-l2));
+  --gray-color-3: hsl(var(--gray-hs), var(--gray-l3));
+  --gray-color-4: hsl(var(--gray-hs), var(--gray-l4));
+  --gray-color-5: hsl(var(--gray-hs), var(--gray-l5));
+  --gray-color-6: hsl(var(--gray-hs), var(--gray-l6));
+  --gray-color-7: hsl(var(--gray-hs), var(--gray-l7));
+  --gray-color-8: hsl(var(--gray-hs), var(--gray-l8));
+  --gray-color-9: hsl(var(--gray-hs), var(--gray-l9));
 
-  --bg-color: hsl(var(--dark-hs), calc(var(--dark-l) + 75%));
-  --bg-color-dark: hsl(var(--dark-hs), calc(var(--dark-l) + 72%));
+  --border-color: var(--gray-color-8);
+  --border-color-dark: var(--gray-color-7);
+  --border-color-light: var(--gray-color-9);
+
+  --bg-color: var(--gray-color-8);
+  --bg-color-dark: var(--gray-color-9);
   --bg-color-light: var(--light-color);
 
   /********************************************************
@@ -58,9 +96,11 @@
   --highlight-color: hsl(43, 100%, 85%);
   --body-bg: var(--bg-color-light);
   --body-font-color: hsl(217, 16%, 27%);
-  --link-color: var(--primary-color);
-  --link-color-dark: hsl(var(--primary-hs), calc(var(--primary-l) - 10%));
-  --link-color-light: hsl(var(--primary-hs), calc(var(--primary-l) + 10%));
+  --link-color: var(--primary-color-5);
+  --link-color-dark: hsl(var(--primary-hs), calc(var(--primary-l5) - 10%));
+  --link-color-light: hsl(var(--primary-hs), calc(var(--primary-l5) + 10%));
+
+  --shadow-1: 0 0 0 0.1rem var(--primary-color-9);
 
   /********************************************************
    *
@@ -74,6 +114,17 @@
   --mono-font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;
   --fallback-font-family: "Helvetica Neue", sans-serif;
   --body-font-family: var(--base-font-family), var(--fallback-font-family);
+
+  /********************************************************
+    * FONT SIZES
+    ********************************************************/
+
+  --html-font-size: 20px;
+  --html-line-height: 1.5;
+  --font-size: 0.8rem;
+  --font-size-sm: 0.7rem;
+  --font-size-lg: 0.9rem;
+  --line-height: 1.2rem;
 
   /********************************************************
    * UNIT SIZES
@@ -93,17 +144,6 @@
   --unit-10: 2rem;
   --unit-12: 2.4rem;
   --unit-16: 3.2rem;
-
-  /********************************************************
-   * FONT SIZES
-   ********************************************************/
-
-  --html-font-size: 20px;
-  --html-line-height: 1.5;
-  --font-size: 0.8rem;
-  --font-size-sm: 0.7rem;
-  --font-size-lg: 0.9rem;
-  --line-height: 1.2rem;
 
   /********************************************************
    * SIZES

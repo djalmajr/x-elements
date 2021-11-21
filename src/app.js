@@ -23,13 +23,31 @@ export class App extends BaseElement {
 
   render() {
     return html`
-      <x-button @click=${this.handleDecrease}>-</x-button>
-      <span class="counter">${this.state.count}</span>
-      <x-button @click=${this.handleIncrease}>+</x-button>
-      <form @submit=${(e) => e.preventDefault()}>
-        <input name="name" @input=${this.handleChange} />
-        <span>Hello ${this.state.name || "Djalma Júnior"}!</span>
-      </form>
+      <h3>Buttons</h3>
+      <p>
+        Buttons include simple button styles for actions in different types and sizes.
+      </p>
+      <x-button>default button</x-button>
+      <x-button intent="primary">primary button</x-button>
+      <div>
+        ${["primary", "secondary", "gray"].map((color) => {
+          return html`
+            <div style="display: flex; flex-direction: row">
+              ${Array(9)
+                .fill(1)
+                .map((_, i) => {
+                  const style = `
+                    background: var(--${color}-color-${i + 1});
+                    height: 1.5rem;
+                    width: 1.5rem;
+                  `;
+
+                  return html`<div class="box" style=${style}></div>`;
+                })}
+            </div>
+          `;
+        })}
+      </div>
     `;
   }
 }
